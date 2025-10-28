@@ -14,8 +14,8 @@ If you get a "Permission denied" error when Laravel tries to write logs or cache
 Linux
 
 ```bash
-docker-compose exec app chmod -R 755 storage bootstrap/cache
-docker-compose exec app chown -R www-data:www-data storage bootstrap/cache
+docker-compose exec app chown -R www-data:www-data storage bootstrap/cache database
+docker-compose exec app chmod -R 755 storage bootstrap/cache database
 docker-compose exec app chown www-data:www-data database/database.sqlite
 docker-compose exec app chmod 644 database/database.sqlite
 
